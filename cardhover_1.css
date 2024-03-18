@@ -1,163 +1,209 @@
-@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
-.work-samples {
-  display: grid;
-  grid-gap: 1rem;
-  padding: 1rem;
-  max-width: 1024px;
-  margin: 0 auto;
-  font-family: 'Rubik', sans-serif;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
-.work-sample {  
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-  padding: 1rem;
-  width: 100%;
-  text-align: center;
-  color: whitesmoke;
-  background-color: whitesmoke;
-  box-shadow: 0 1px 1px rgba(0,0,0,0.1), 
-    0 2px 2px rgba(0,0,0,0.1), 
-    0 4px 4px rgba(0,0,0,0.1), 
-    0 8px 8px rgba(0,0,0,0.1),
-    0 16px 16px rgba(0,0,0,0.1);
+body {
+	font-family: "Inter", sans-serif;
 }
 
-.work-sample:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 110%;
-  background-size: cover;
-  background-position: 0 0;
-  transition: transform 700ms cubic-bezier(0.19, 1, 0.22, 1);
-  pointer-events: none;
+:root {
+	--light: #ffe6e6;
+	--dark: #0c0c0c;
 }
 
-.work-sample:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200%;
-  pointer-events: none;
-  background-image: linear-gradient(
-    to bottom,
-    hsla(0, 0%, 0%, 0) 0%,
-    hsla(0, 0%, 0%, 0.009) 11.7%,
-    hsla(0, 0%, 0%, 0.034) 22.1%,
-    hsla(0, 0%, 0%, 0.072) 31.2%,
-    hsla(0, 0%, 0%, 0.123) 39.4%,
-    hsla(0, 0%, 0%, 0.182) 46.6%,
-    hsla(0, 0%, 0%, 0.249) 53.1%,
-    hsla(0, 0%, 0%, 0.320) 58.9%,
-    hsla(0, 0%, 0%, 0.394) 64.3%,
-    hsla(0, 0%, 0%, 0.468) 69.3%,
-    hsla(0, 0%, 0%, 0.540) 74.1%,
-    hsla(0, 0%, 0%, 0.607) 78.8%,
-    hsla(0, 0%, 0%, 0.668) 83.6%,
-    hsla(0, 0%, 0%, 0.721) 88.7%,
-    hsla(0, 0%, 0%, 0.762) 94.1%,
-    hsla(0, 0%, 0%, 0.790) 100%
-  );
-  transform: translateY(-50%);
-  transition: transform 1400ms cubic-bezier(0.19, 1, 0.22, 1);
+.container {
+	--bg-color: radial-gradient(
+		circle at 50% 0%,
+		rgba(50, 50, 50, 1) 0%,
+		rgba(12, 12, 12, 1) 100%
+	);
+
+	overflow: clip;
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	padding: 2rem 5rem;
+
+	width: 100%;
+	height: 100dvh;
+	background-image: var(--bg-color);
 }
 
-.work-sample:nth-child(1):before {
-  background-image: url('https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ');
+.category_container {
+	--gap: 0.5rem;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: calc(var(--gap) * 2);
+
+	width: 100%;
+	height: 100%;
 }
 
-.work-sample:nth-child(2):before {
-  background-image: url('https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ');
+.content {
+	--active: 0;
+
+	cursor: pointer;
+	overflow: clip;
+
+	position: relative;
+	z-index: 10;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 1.5rem;
+
+	padding: 2.5rem;
+
+	width: calc((100% / 3) - var(--gap));
+	height: 100%;
+
+	border-radius: 1rem;
+
+	transition: width 0.5s ease-in-out;
+}
+.content:hover {
+	--active: 1;
+
+	width: calc(70% - var(--gap));
+}
+.content::before {
+	content: "";
+
+	position: absolute;
+	z-index: -10;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+	background-color: var(--dark);
+
+	opacity: 0.6;
 }
 
-.work-sample:nth-child(3):before {
-  background-image: url('https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ');
+.content img {
+	position: absolute;
+	z-index: -20;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	object-fit: cover;
+	object-position: center;
 }
 
-.work-sample:nth-child(4):before {
-  background-image: url('https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ');
+.content .profile_image {
+	opacity: calc(1 - var(--active));
+
+	transition: opacity 0.3s ease-in-out;
 }
 
-.work-sample-content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 1rem;
+.profile_detail {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	width: 12rem;
+	transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
 }
 
-.work-sample-title {
-  font-size: 1.3rem;
-  font-weight: bold;
-  line-height: 1.2;
+.profile_detail span {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--light);
+	text-wrap: nowrap;
 }
 
-.work-sample-description {
-  font-family: 'Cardo', serif;
-  font-size: 1.125rem;
-  font-style: italic;
-  line-height: 1.35;
+.profile_detail p {
+	font-size: 0.75rem;
+	font-weight: 500;
+	color: var(--light);
 }
 
-.work-sample-btn {
-  cursor: pointer;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.65rem;
-  font-weight: bold;
-  letter-spacing: 0.025rem;
-  text-transform: uppercase;
-  color: white;
-  background-color: black;
-  border: none;
+.profile_quote {
+	width: 22rem;
+	transform: translate(0, calc((1 - var(--active)) * (100% + 2.5rem)));
 }
 
-.work-sample-btn:hover {
-  background-color: #000000d9;
+.profile_quote p {
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--light);
+
+	transform: translate(0, calc((1 - var(--active)) * (100% + 2.5rem)));
+
+	transition: transform 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.1s;
 }
 
-.work-sample-btn:focus {
-  outline: 1px dashed yellow;
-  outline-offset: 3px;
+
+
+
+
+
+
+
+
+//
+//	create an 'accordion' wrapper for the quote text 
+//	1 set initial height to zero fr  
+//	2 add overflow hidden to hide quote text 
+//	3 add transtion for grid-template-rows
+// 
+.wrapper {
+	display: grid;
+  	grid-template-rows: 0fr;
+  	overflow: hidden;
+	transition: grid-template-rows 0.5s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s;
 }
-@media (hover: hover) and (min-width: 600px) {
-  .work-sample:hover .work-sample:before,
-  .work-sample:focus-within .work-sample:before {
-    transform: translateY(-4%);
-  }
 
-  .work-sample:hover .work-sample:after,
-  .work-sample:focus-within .work-sample:after {
-    transform: translateY(-50%);
-  }
-
-  .work-sample:hover .work-sample-content,
-  .work-sample:focus-within .work-sample-content {
-    transform: translateY(0);
-  }
-
-  .work-sample:hover .work-sample-content > *:not(.work-sample-title),
-  .work-sample:focus-within .work-sample-content > *:not(.work-sample-title) {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: calc(700ms / 8);
-  }
-
-  .work-sample:focus-within .work-sample:before,
-  .work-sample:focus-within .work-sample:after,
-  .work-sample:focus-within .work-sample-content,
-  .work-sample:focus-within .work-sample-content > *:not(.work-sample-title) {
-    transition-duration: 0s;
-  }
+//
+//  add min-height 0 on the quote text to override the 
+// 	default max-content of fr - add a bit of individual
+//. animation for the quote (to not follow detail)
+// 
+.profile_quote { 
+	min-height: 0; 
+	transform: translateY(50%);
+	opacity: 0;
+	transition: 
+		opacity 0.8s ease-in-out,
+		transform 0.8s cubic-bezier(0.23, 0.93, 0.77, 1) 0.01s
+	;	
 }
+
+
+// 	expand (animated) wrapper row height to 1 fr
+//	(this will animate detail up when making room for quote)
+.content:hover .wrapper {
+  	grid-template-rows: 1fr;
+}
+
+// remove translate to male quote slide in 
+.content:hover .profile_quote {
+	transform: none;
+	opacity: 1;	
+}
+
+
+
+
+
+
+
+// credit note
+dialog { position: absolute; z-index: 1; background: none; color: white; border: 0; font-size: .8rem; padding:.5em;}
+dialog a { color: whitesmoke; }
 
