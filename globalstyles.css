@@ -1,0 +1,365 @@
+    .theme {
+      
+        background:  url('https://content.app-sources.com/s/83310262299176319/uploads/Downloaded/pfrm_expl_unsplsh-kTg4NXEmfs8-0345561.webp') repeat center center !important;
+      
+    }
+  
+
+  :root {
+    --color-primary: rgba(60, 21, 201, 1);
+    --color-secondary1: rgba(254, 185, 96, 1);
+    --color-secondary2: rgba(156, 229, 199, 1);
+    --color-secondary3: rgba(20, 17, 40, 1);
+    --color-secondary4: rgba(248, 245, 255, 1);
+  }
+
+  
+    .theme .color-primary, .color-primary {
+      color: rgba(60, 21, 201, 1);
+    }
+    .theme .bg-color-primary, .bg-color-primary {
+      background-color: rgba(60, 21, 201, 1);
+    }
+    .theme .border-color-primary, .border-color-primary {
+      border-color: rgba(60, 21, 201, 1);
+    }
+    .theme .fill-color-primary, .fill-color-primary {
+      fill: rgba(60, 21, 201, 1);
+    }
+  
+    .theme .color-secondary1, .color-secondary1 {
+      color: rgba(254, 185, 96, 1);
+    }
+    .theme .bg-color-secondary1, .bg-color-secondary1 {
+      background-color: rgba(254, 185, 96, 1);
+    }
+    .theme .border-color-secondary1, .border-color-secondary1 {
+      border-color: rgba(254, 185, 96, 1);
+    }
+    .theme .fill-color-secondary1, .fill-color-secondary1 {
+      fill: rgba(254, 185, 96, 1);
+    }
+  
+    .theme .color-secondary2, .color-secondary2 {
+      color: rgba(156, 229, 199, 1);
+    }
+    .theme .bg-color-secondary2, .bg-color-secondary2 {
+      background-color: rgba(156, 229, 199, 1);
+    }
+    .theme .border-color-secondary2, .border-color-secondary2 {
+      border-color: rgba(156, 229, 199, 1);
+    }
+    .theme .fill-color-secondary2, .fill-color-secondary2 {
+      fill: rgba(156, 229, 199, 1);
+    }
+  
+    .theme .color-secondary3, .color-secondary3 {
+      color: rgba(20, 17, 40, 1);
+    }
+    .theme .bg-color-secondary3, .bg-color-secondary3 {
+      background-color: rgba(20, 17, 40, 1);
+    }
+    .theme .border-color-secondary3, .border-color-secondary3 {
+      border-color: rgba(20, 17, 40, 1);
+    }
+    .theme .fill-color-secondary3, .fill-color-secondary3 {
+      fill: rgba(20, 17, 40, 1);
+    }
+  
+    .theme .color-secondary4, .color-secondary4 {
+      color: rgba(248, 245, 255, 1);
+    }
+    .theme .bg-color-secondary4, .bg-color-secondary4 {
+      background-color: rgba(248, 245, 255, 1);
+    }
+    .theme .border-color-secondary4, .border-color-secondary4 {
+      border-color: rgba(248, 245, 255, 1);
+    }
+    .theme .fill-color-secondary4, .fill-color-secondary4 {
+      fill: rgba(248, 245, 255, 1);
+    }
+  
+    .note-editable.panel-body h1, 
+    .text-widget-content h1,
+    .post-description h1 {
+      font-family: Ohno TTF, arial;
+      line-height: 1.3em;
+      font-size: 38px;
+      color: rgba(0, 0, 0, 1);
+      
+          letter-spacing: 0.3px;
+        
+    }
+  
+    .note-editable.panel-body h2, 
+    .text-widget-content h2,
+    .post-description h2 {
+      font-family: Magra Bold, arial;
+      line-height: 1.3em;
+      font-size: 42px;
+      color: rgba(0, 0, 0, 1);
+      
+          letter-spacing: normal;
+        
+    }
+  
+    .note-editable.panel-body h3, 
+    .text-widget-content h3,
+    .post-description h3 {
+      font-family: Magra Regular, arial;
+      line-height: 1.5em;
+      font-size: 28px;
+      color: rgba(0, 0, 0, 1);
+      
+          letter-spacing: normal;
+        
+    }
+  
+    .note-editable.panel-body h4, 
+    .text-widget-content h4,
+    .post-description h4 {
+      font-family: Jakarta Sans, arial;
+      line-height: 1.7em;
+      font-size: 19px;
+      color: rgba(0, 0, 0, 1);
+      
+          letter-spacing: 0.8px;
+        
+    }
+  
+    .note-editable.panel-body h5, 
+    .text-widget-content h5,
+    .post-description h5 {
+      font-family: Lato, arial;
+      line-height: 1.3em;
+      font-size: 18px;
+      color: rgba(0, 0, 0, 1);
+      
+          letter-spacing: normal;
+        
+    }
+  
+    .note-editable.panel-body h6, 
+    .text-widget-content h6,
+    .post-description h6 {
+      font-family: Lato, arial;
+      line-height: 1.2em;
+      font-size: 15px;
+      color: rgba(0, 0, 0, 1);
+      
+          letter-spacing: 0.5px;
+        
+    }
+  
+        .note-editable.panel-body li, 
+        .text-widget-content li, 
+      
+    .note-editable.panel-body p, 
+    .text-widget-content p,
+    .post-description p {
+      font-family: Jakarta Sans, arial;
+      line-height: 1.6em;
+      font-size: 17px;
+      color: rgba(0, 0, 0, 1);
+      
+          letter-spacing: 0.8px;
+        
+    }
+  
+        .note-editable.panel-body blockquote > p,
+        .text-widget-content blockquote > p,
+      
+    .note-editable.panel-body blockquote, 
+    .text-widget-content blockquote,
+    .post-description blockquote {
+      font-family: Lato, arial;
+      line-height: 1.6em;
+      font-size: 15px;
+      color: #3e3e3e;
+      
+          letter-spacing: normal;
+        
+    }
+  
+    body {}
+    @media screen and (max-width: 768px) {
+     .note-editable.panel-body h1, 
+       .text-widget-content h1 {
+        font-family: Lato;
+        line-height: 1.4em;
+        font-size: 26px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+     .note-editable.panel-body h2, 
+       .text-widget-content h2 {
+        font-family: Lato;
+        line-height: 1.3em;
+        font-size: 23px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+     .note-editable.panel-body h3, 
+       .text-widget-content h3 {
+        font-family: Lato;
+        line-height: 1.3em;
+        font-size: 19px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+     .note-editable.panel-body h4, 
+       .text-widget-content h4 {
+        font-family: Jakarta Sans;
+        line-height: 1.5em;
+        font-size: 17px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+     .note-editable.panel-body h5, 
+       .text-widget-content h5 {
+        font-family: Jakarta Sans;
+        line-height: 1.3em;
+        font-size: 16px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+     .note-editable.panel-body h6, 
+       .text-widget-content h6 {
+        font-family: Jakarta Sans;
+        line-height: 1em;
+        font-size: 14px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+     .note-editable.panel-body li, 
+           .text-widget-content li,    
+         .note-editable.panel-body p, 
+       .text-widget-content p {
+        font-family: Jakarta Sans;
+        line-height: 1.6em;
+        font-size: 16px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: 0.4px;
+          
+      }
+
+     .note-editable.panel-body blockquote > p,
+           .text-widget-content blockquote > p,
+         .note-editable.panel-body blockquote, 
+       .text-widget-content blockquote {
+        font-family: Open Sans;
+        line-height: 1.6em;
+        font-size: 14px !important;
+        color: #3e3e3e;
+        
+            letter-spacing: normal;
+          
+      }
+
+    
+      body {}
+    }
+  
+
+  .page-layout:not(.style-boxed-layout) .grid-content,
+  .theme .page-layout:not(.style-boxed-layout) .container,
+  .page-layout.header-layout-floating:not(.style-boxed-layout) .main-header-wrapper,
+  .page-layout.fixed-header-layout-floating:not(.style-boxed-layout) .fixed-header-wrapper,
+  .mega-menu-inner, .megamenu-settings-wrapper {
+    max-width: 1100px;
+  }
+
+  .style-boxed-layout.page-layout,
+  .theme .style-boxed-layout .fixed-header-wrapper, 
+  .theme .style-boxed-layout .fixed-header-wrapper.visible,
+  #website.theme .fixed-header-layout-floating .fixed-header-wrapper, 
+  #website.theme .fixed-header-layout-floating .fixed-header-wrapper.visible
+  {
+    width: 1100px;
+  }
+  /*
+    #website.theme .header-layout-floating .fixed-header-wrapper, 
+    #website.theme .header-layout-floating .fixed-header-wrapper.visible {
+      width: 1100px;
+    }*/
+  /*
+    #website.theme .fixed-header-layout-floating .fixed-header-wrapper, 
+    #website.theme .fixed-header-layout-floating .fixed-header-wrapper.visible {
+      width: calc(1100px - 130px) !important;
+  }
+  */
+  .style-boxed-layout .grid-content,
+  .style-boxed-layout .container,
+  .style-boxed-layout.header-layout-floating .main-header-wrapper,
+  .style-boxed-layout.fixed-header-layout-floating .fixed-header-wrapper {
+    max-width: 90%;
+  }
+
+  .note-editable.panel-body a,
+  .text-widget-content a {
+    color: ;
+    text-decoration: none;
+  }
+
+  .note-editable.panel-body a:hover,
+  .text-widget-content a:hover {
+    color: ;
+    text-decoration: none;
+  }
+
+  .theme .page-layout {
+    background: #ffffff;
+  }
+
+  .theme .primaryColor,
+  .theme .highlightColor:hover,
+  .theme .smaller .highlightColor:hover,
+  .theme .highlightColor.active,
+  .portfolio-filter ul li.active a, 
+  .portfolio-filter ul li a:hover,
+  .portfolio-list-wrapper .image-overlay a:hover,
+  .portfolio-widget-item .primaryColor-bg2:hover,
+  .tmdp-pagination [data-role]:hover i, .blog-back-btn:hover i,
+  .products-filter-style-1 ul li.active a,
+  .products-filter-style-1 ul li a:hover,
+  .side-filter .products-filter section > ul > li.active > a,
+  .side-filter .products-filter section > ul > li:hover > a,
+  .side-filter .products-filter section ul li li:hover > a,
+  .side-filter .products-filter section ul li li.active > a,
+  .has-subcategories div:hover:before,
+  .store6 .product-item-description .product-item-price,
+  .post-category a,
+  .login-question a,
+  .promo-code-toggle-btn,
+  .steps-nav-wrapper a.active,
+  .steps-nav-wrapper a:hover,
+  .steps-nav-wrapper a.active:after,
+  .box-select h5,
+  .quick-view-wrapper .product-body-container .quick-view-title a:hover,
+  .theme .view-details-btn,
+  .products-filter .search-form button:hover:after,
+  .product-characteristics:hover,
+  .product-reviews-link:hover,
+  .theme .profile-sidebar li:hover a,
+  .member-logout-button
+  {
+…</style>
