@@ -1,0 +1,292 @@
+  <!-- Calendly inline widget begin -->
+<div id="calendly-container" class="calendly-inline-widget" data-url="https://calendly.com/anubismusicgroup/30min2"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+
+
+  /* Set the Calendly container to take 100% of the width and a specific height */
+  #calendly-container.calendly-inline-widget {
+    width: 100%;
+    height: 800px; /* Adjust this height as needed */
+    overflow: hidden; /* Add this to hide any overflow content */
+  }
+
+  /* Ensure that the Calendly iframe inside it also takes 100% of width and height */
+  #calendly-container.calendly-inline-widget iframe {
+    width: 100%;
+    height: 100%;
+  }/* Global reset he look at me */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  justify-content: center;
+}
+
+/* Main container */
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+  min-height: 80vh;
+  top: 0px; 
+}
+
+/* Slider item styles */
+.new-item {
+ width: 200px;
+  height: 34vh;
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 30px rgba(255, 255, 255, 0.3) inset;
+  transition: transform 0.1s, left 0.75s, top 0.75s, width 0.75s, height 0.75s;
+  background-image: var(--background-image-url); /* Add this line */
+}
+
+/* Specific styles for first two items */
+.new-item:nth-child(1),
+.new-item:nth-child(2) {
+position: absolute;
+    TOP: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    box-shadow: none;
+    opacity: 1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0;
+}
+
+/* Positioning for other items */
+.new-item:nth-child(3) { left: 55%; }
+.new-item:nth-child(4) { left: calc(55% + 220px); }
+.new-item:nth-child(5) { left: calc(55% + 440px); }
+.new-item:nth-child(6) { left: calc(55% + 660px); opacity: 0; }
+
+/* Content styles */
+.new-content {
+  width: 46%;
+  position: absolute;
+  top: 50%;
+  left: 6%;
+  transform: translateY(-50%);
+  font: 400 0.85rem Helvetica, sans-serif;
+  color: white;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: none;
+}
+
+.new-content .title {
+  font-family: 'Jakarta Sans';
+    font-weight: 700;
+    font-size: 5rem;
+  line-height: 100%;
+    width: 100%;
+}
+
+.new-content .description {
+  line-height: 1.7;
+  margin: 6% 0 6%;
+  font-size: 1.0rem;
+  width: 95%;
+}
+
+.new-content button {
+  width: fit-content;
+  background-color: rgba(0, 0, 0, 0.1);
+  color: white;
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+/* Show animation */
+.new-item:nth-of-type(2) .new-content {
+  display: block;
+  animation: show 0.75s ease-in-out 0.3s forwards;
+}
+
+@keyframes show {
+  0% {
+    filter: blur(5px);
+    transform: translateY(calc(-50% + 75px));
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Navigation styles */
+.nav {
+  position: absolute;
+  bottom: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  user-select: none;
+}
+
+.nav .btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.7);
+  border: 2px solid rgba(0, 0, 0, 0.6);
+  margin: 0 0.25rem;
+  padding: 0.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.nav .btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive styles */
+@media (min-width: 651px) and (max-width: 899px) {
+  .new-content .title { font-size: 4rem; line-height: 4rem; }
+  .new-content .description { font-size: 0.9rem; }
+  .new-content button { font-size: 0.7rem; }
+
+  .new-item {
+    width: 160px;
+    height: 34vh;
+  }
+  
+  .new-item:nth-child(1), .new-item:nth-child(2) {
+    width: 100vw;
+  }
+
+  .new-item:nth-child(3) { left: 50%; }
+  .new-item:nth-child(4) { left: calc(50% + 170px); }
+  .new-item:nth-child(5) { left: calc(50% + 340px); }
+  .new-item:nth-child(6) { left: calc(50% + 510px); opacity: 0; }
+}
+
+@media (max-width: 650px) {
+  .new-content .title { font-size: 1.7rem; }
+  .new-content .description { font-size: 0.75rem; }
+  .new-content button { font-size: 0.7rem; }
+
+  .new-item {
+    width: 130px;
+    height: 34vh;
+  }
+  
+  .new-item:nth-child(1), .new-item:nth-child(2) {
+    width: 100vw;
+  }
+
+  .new-item:nth-child(3) { left: 50vw; }
+  .new-item:nth-child(4) { left: calc(50vw + 140px); }
+  .new-item:nth-child(5) { left: calc(50vw + 280px); }
+  .new-item:nth-child(6) { left: calc(50vw + 420px); opacity: 0; }
+}
+
+
+#container-widget-1710376550943 {
+    /* Adjust the top position to be below the height of the first container */
+    top: 100%; /* You may need to adjust this value based on your layout */
+    position: relative; /* Ensure the container is positioned relative to its parent */
+}
+
+.grid-content {
+    display: -ms-flexbox;
+    display: flex !important;
+    flex-direction: row;
+}
+
+.widget-row {
+    float: none !important;
+}
+
+
+.video-container {
+	margin: auto;
+	max-width: 100%;
+}
+
+input[data-plyr="volume"] {
+    display: none !important;
+}
+
+/* Hide the menu items you want to disable based on their text content */
+/* Hide the first menu item and its associated span */
+/* Hide the first and second menu items and their associated spans */
+.plyr__menu__container [role=menuitem]:nth-child(1),
+.plyr__menu__container [role=menuitemradio]:nth-child(1),
+.plyr__menu__container [role=menuitem]:nth-child(1) span,
+.plyr__menu__container [role=menuitemradio]:nth-child(1) span,
+.plyr__menu__container [role=menuitem]:nth-child(2),
+.plyr__menu__container [role=menuitemradio]:nth-child(2),
+.plyr__menu__container [role=menuitem]:nth-child(2) span,
+.plyr__menu__container [role=menuitemradio]:nth-child(2) span {
+    display: none !important;
+}
+
+
+.grid-column.justify-center {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+}
+
+
+#heading-widget-1675441484165 {
+  display: flex !important;
+  align-content: center !important;
+  position: relative
+    
+}
+
+.grid-column.justify-flex-start {
+  top: 0px;
+}
+
+
+#text-widget-1710871853352 ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -5%;
+  width: calc(10% + 100%);
+  background-color: rgba(248, 245, 255, 1);
+  border-radius: 20px; /* Inherit border radius from the textWidget */
+  z-index: -1; /* Move the overlay behind the text */
+}
+
+#text-widget-1710905677795::before {
+content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -7.5%;
+    width: calc(14.5% + 100%);
+    background-color: rgba(248, 245, 255, 1);
+    border-radius: 20px;
+    z-index: -1;
+}
+
+
+#heading-widget-1710905677756 {
+	position:absolute
+      
+}
+</style>
